@@ -5,6 +5,7 @@ import {
   getCurrQuantityById,
   increaseItemQuantity,
 } from "../features/cart/cartSlice";
+import { Link } from "react-router-dom";
 
 function Produkte(props) {
   const { data } = props;
@@ -14,8 +15,9 @@ function Produkte(props) {
   const cartItemsAmount = cartItems[id];
   const dispatch = useDispatch();
   const quantity = useSelector(getCurrQuantityById(id));
+
   return (
-    <div className="product border rounded-lg w-64 md:w-80 h-95 p-6 m-4 flex flex-col justify-center ">
+    <div className="product border rounded-lg w-full md:w-80 h-95 p-6 m-4 flex flex-col justify-center ">
       <ul className="">
         <li key={`Liste${id}`}>
           <img
@@ -25,12 +27,11 @@ function Produkte(props) {
             alt={`Picture:${productImg}`}
           />
           <div className="description text-center mt-4">
-            <span className="text-3xl" key={`Name${id}`}>
+            <span className="text-2xl md:text-3xl" key={`Name${id}`}>
               {name}
             </span>
             <br />
-            <span className="text-lg" key={`Preis${id}`}>
-              {" "}
+            <span className="text-base md:text-lg" key={`Preis${id}`}>
               <b>Preis: </b> {price}
             </span>
           </div>
@@ -54,37 +55,21 @@ function Produkte(props) {
         </>
       ) : (
         <>
-          <button
+          <Link
+            to="https://buy.stripe.com/test_fZe4hE8CydEw8U06oq?locale=de"
+            target="_blank"
+            rel="noreferrer"
             key={`Add${id}`}
-            // onClick={(e) => {
-            //   e.preventDefault();
-            //   const newItem = {
-            //     cartId: id,
-            //     name: name,
-            //     quantity: 1,
-            //     productImg: productImg,
-            //     unitPrice: price,
-            //     totalPrice: price * 1,
-            //   };
-            //   dispatch(addItem(newItem));
-            // }}
             className={`${
               cartItemsAmount > 0 ? "bg-slate-600 text-white" : ""
-            } addToCartBttn border border-gray-700 px-4 py-2 rounded-lg mt-4 hover:bg-gray-700 hover:text-white  cursor-pointer`}
+            } text-center addToCartBttn border border-gray-700 px-4 py-2 rounded-lg mt-4 hover:bg-gray-700 hover:text-white  cursor-pointer`}
           >
-            <a
-              href="https://buy.stripe.com/test_fZe4hE8CydEw8U06oq?locale=de"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Pay
-            </a>
-
+            <span>Pay</span>
             {cartItemsAmount > 0 && <>({cartItemsAmount})</>}
-          </button>
+          </Link>
         </>
       )}
-      <div className="content-details">
+      <div className="content-details mt-4">
         <p>Details:</p>
         <ul className="left-0 ml-0 p-0">
           <li>adw</li>
