@@ -1,8 +1,10 @@
 function Impressum() {
   return (
-    <div className="text-center ">
-      <h2>Impressum der Junior Company EasyCharge</h2>
-      <div className="flex flex-col space-x-7  text-center justify-center">
+    <div className="bg-white p-8 rounded-lg shadow-md max-w-screen-md mx-auto my-8">
+      <h2 className="text-3xl font-semibold mb-6 text-center">
+        Impressum der Junior Company EasyCharge
+      </h2>
+      <div className="text-left space-y-4">
         <div>
           <strong>Adresse:</strong> [Name des Verantwortlichen], [Musterstraße
           123], [PLZ Ort]
@@ -13,7 +15,11 @@ function Impressum() {
           <br />
           Telefon: [Telefonnummer]
           <br />
-          E-Mail: <a href={`mailto:[E-Mail-Adresse]`}>{`[E-Mail-Adresse]`}</a>
+          E-Mail:{" "}
+          <a
+            href={`mailto:[E-Mail-Adresse]`}
+            className="text-blue-500 hover:underline"
+          >{`[E-Mail-Adresse]`}</a>
         </div>
 
         <p>
@@ -63,6 +69,7 @@ function Impressum() {
             href="https://ec.europa.eu/consumers/odr/"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
           >
             https://ec.europa.eu/consumers/odr/
           </a>{" "}
