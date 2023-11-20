@@ -13,7 +13,7 @@ function Navbar() {
         <div className="flex items-center">
           <Icon_3lines setDropdown={setDropdown} Dropdown={Dropdown} />
           <Link className="ml-2 text-xl font-bold" to="/JC-Website/">
-            Your Logo
+            <img src="Logo.jpeg" alt="Logo" />
           </Link>
         </div>
         <div className="md:flex md:items-center md:ml-4 md:gap-16">
