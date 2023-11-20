@@ -1,6 +1,6 @@
-import { InstagramLogo, YoutubeLogo } from "phosphor-react";
+import { InstagramLogo } from "phosphor-react";
 import styled from "styled-components";
-import { FaMailchimp } from "react-icons/fa";
+import { FaLinkedin, FaMailchimp } from "react-icons/fa";
 
 const StyledFooter = styled.footer`
   background-color: #f5f5f5;
@@ -34,7 +34,7 @@ function Footer() {
       <IconContainer>
         <InstagramLogo size={24} />
         <StyledLink
-          href="https://instagram.com"
+          href="https://www.instagram.com/easycharge_jc/"
           target="_blank"
           rel="noreferrer"
         >
@@ -43,9 +43,13 @@ function Footer() {
       </IconContainer>
 
       <IconContainer>
-        <YoutubeLogo size={24} />
-        <StyledLink href="https://youtube.com" target="_blank" rel="noreferrer">
-          Subscribe on Youtube
+        <FaLinkedin size={24} />
+        <StyledLink
+          href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Follow on LinkedIn
         </StyledLink>
       </IconContainer>
 
