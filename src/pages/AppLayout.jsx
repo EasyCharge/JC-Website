@@ -12,10 +12,11 @@ function AppLayout() {
         <Outlet />
       </main>
       {location.pathname ===
-      "/JC-Website/products" ? null : location.pathname !==
-        "/JC-Website/about-us" ? (
+      "/JC-Website/products" ? null : location.pathname ===
+        "/JC-Website/about-us" ? null : location.pathname ===
+        "/JC-Website/impressum" ? null : (
         <Footer className="mt-auto" />
-      ) : null}
+      )}
     </div>
   );
 }
