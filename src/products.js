@@ -1,5 +1,10 @@
 export const DATA = [
-  { id: 1, name: "Powerbank EasyCharge", price: 33.3, productImg: "/bank.jpg" },
+  {
+    id: 1,
+    name: "Powerbank EasyCharge",
+    price: 33.3,
+    productImg: "/Product.jpeg",
+  },
 ];
 export const FOUNDERS = [
   {
