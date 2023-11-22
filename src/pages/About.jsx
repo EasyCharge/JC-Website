@@ -1,3 +1,4 @@
+import { stakeholder } from "../anteilScheine";
 import ImageAboutUs from "../components/ImageAboutUs";
 import { FOUNDERS } from "../products";
 
@@ -13,15 +14,25 @@ function About() {
           ))}
         </ul>
       </div>
-      <div className="ml-auto bg-slate-50 p-8 md:p-16 mt-6 md:mt-12 rounded-md shadow-lg overflow-y-auto z-10">
-        {" "}
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Achievements</h2>
-        <ul className="list-disc text-base md:text-lg">
-          <li>Dies dasd</li>
-          <li>Dies dasd</li>
-          <li>Dies dasd</li>
-          <li>Dies adsda</li>
-        </ul>
+      <div className="flex justify-between flex-wrap">
+        <span className="flex-1 ml-5  bg-slate-50 p-8 md:p-16 mt-6 md:mt-12 rounded-md shadow-lg overflow-y-auto z-10">
+          {" "}
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Achievements</h2>
+          <ul className="list-disc text-base md:text-lg">
+            <li>Gewinner einer Enterpreanurship Week</li>
+          </ul>
+        </span>
+        <span className="flex-1 ml-5 mr-5 bg-slate-50 p-8 md:p-16 mt-6 md:mt-12 rounded-md shadow-lg overflow-y-auto z-10">
+          {" "}
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Junior Company Anteilscheine:
+          </h2>
+          <ul className="list-disc text-base md:text-lg">
+            <li>Price: {stakeholder.price}€</li>
+            <li>Total: {stakeholder.total}</li>
+            <li>Taken: {stakeholder.taken}</li>
+          </ul>
+        </span>
       </div>
     </>
   );

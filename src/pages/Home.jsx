@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 function Home() {
   return (
     <>
@@ -17,6 +19,7 @@ function Home() {
           <img src="/forrest.jpg" alt="Bild" className="w-full h-auto" />
         </div>
       </div>
+      <Footer className="mt-auto" />
     </>
   );
 }

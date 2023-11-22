@@ -60,7 +60,7 @@ function Produkte(props) {
             cartItemsAmount > 0
               ? "bg-blue-500 text-white"
               : "hover:bg-blue-500 hover:text-white"
-          } px-6 py-3 rounded-lg mt-4 transition-all`}
+          } px-6 py-3 rounded-lg mt-4 transition-all text-center`}
         >
           <span>Pay</span>
           {cartItemsAmount > 0 && <>({cartItemsAmount})</>}
@@ -70,9 +70,9 @@ function Produkte(props) {
       <div className="content-details mt-4">
         <p className="font-semibold">Details:</p>
         <ul className="list-disc list-inside text-gray-700">
-          <li>adw</li>
-          <li>adwasd</li>
-          <li>adwasdaf</li>
+          <li>Verschiedene Arten: Leder, Stoff</li>
+          <li>inkl. Induktionspowerbank</li>
+          <li>inkl. Klettverschlüsse</li>
         </ul>
       </div>
     </div>
